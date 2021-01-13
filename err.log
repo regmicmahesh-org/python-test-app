@@ -1,0 +1,6 @@
+[Wed Jan 13 12:07:31.677285 2021] [wsgi:error] [pid 294:tid 139694734038592] [client ::1:57258] Hello
+[Wed Jan 13 12:08:48.696870 2021] [wsgi:error] [pid 435:tid 140606340781632] [client 10.6.0.3:47112] Hello
+[Wed Jan 13 12:13:49.140330 2021] [wsgi:error] [pid 577:tid 140283664643648] [client 10.6.0.3:47380] Hello
+[Wed Jan 13 13:16:18.406386 2021] [wsgi:error] [pid 322:tid 140476996245056] [client 10.6.0.3:50938] Hello
+[Wed Jan 13 13:41:29.543948 2021] [autoindex:error] [pid 529:tid 140042198103616] [client 10.6.0.3:52012] AH01276: Cannot serve directory /home/asdf/staticFiles/: No matching DirectoryIndex (index.html) found, and server-generated directory index forbidden by Options directive
+[Wed Jan 13 13:41:46.544946 2021] [autoindex:error] [pid 620:tid 140042106304064] [client 10.6.0.3:52014] AH01276: Cannot serve directory /home/asdf/staticFiles/: No matching DirectoryIndex (index.html) found, and server-generated directory index forbidden by Options directive
