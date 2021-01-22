@@ -1,5 +1,8 @@
 from flask import Flask, request
 import json
+import pika
+
+
 
 app = Flask(__name__, static_folder='')
 
@@ -27,3 +30,22 @@ def view_all_numbers():
         res += f"<h5>{item}</h5>"
 
     return res
+
+@app.route('/otp', methods=['POST'])
+def send_otp():
+
+    number: str = request.form.get('number')
+    routing_key = ""
+
+    if number.startswith('91'):
+        routing_key="india"
+    elif number.startswith('977'):
+        routing_key='nepal'
+    
+    conn = pika.BlockingConnection(pika.ConnectionParameters(host='10.6.0.7'))
+    channel = conn.channel()
+
+    channel.basic_publish('ex.otp', routing_key, number.encode('utf-8'))
+    channel.close()
+    conn.close()
+    return "<h1> OTP Request sent to API Gateway!</h1>"
